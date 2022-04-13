@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "soundddeck": {
+      "hosting": {
+        "soundddeck": [
+          "soundddeck"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "soundddeck"
+  }
+}
