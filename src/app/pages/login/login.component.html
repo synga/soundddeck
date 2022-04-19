@@ -1,1 +1,18 @@
-<p>login works!</p>
+<section>
+  <h1>Soundddeck</h1>
+  <form (ngSubmit)="doLogin()" [formGroup]="loginForm">
+    <div>
+      <label for="email">Seu e-mail!</label>
+      <input type="email" formControlName="email" name="email" />
+    </div>
+    <div>
+      <label for="password">Sua senha</label>
+      <input type="password" formControlName="password" name="password" />
+    </div>
+    <div>
+      <button type="submit" [disabled]="!loginForm.valid">Entrar</button>
+    </div>
+  </form>
+  <hr />
+  <p>Não tem uma conta? <a routerLink="/signup">Crie uma agora!</a></p>
+</section>

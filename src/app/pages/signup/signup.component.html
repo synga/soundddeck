@@ -1,0 +1,26 @@
+<section>
+  <h1>Crie uma conta agora mesmo e comece a usar o Soundddeck</h1>
+
+  <form #signupForm="ngForm" (ngSubmit)="createAccount(signupForm)">
+    <div>
+      <label for="name">Nome</label>
+      <input required name="name" type="text" [(ngModel)]="form.name" />
+    </div>
+    <div>
+      <label for="email">E-mail</label>
+      <input required name="email" type="email" [(ngModel)]="form.email" />
+    </div>
+    <div>
+      <label for="password">Senha</label>
+      <input
+        required
+        name="password"
+        type="password"
+        [(ngModel)]="form.password"
+      />
+    </div>
+    <div>
+      <button type="submit" [disabled]="!signupForm.valid">Criar conta</button>
+    </div>
+  </form>
+</section>
